@@ -1,7 +1,7 @@
 import React from 'react'
 import Type from "../../components/Type"
 
-const OrderPage = () => {
+const OrderPage = ({setStep}) => {
   return (
     <div>
       <h1>Travel Products</h1>
@@ -15,9 +15,11 @@ const OrderPage = () => {
         </div>
 
         <div style={{width: '50%'}}>
-          <p>Total Price: </p>
+          <h2>Total Price: </h2>
           <br />
-          <button>
+          <button
+            onClick={() => setStep(1)}
+          >
             주문
           </button>
         </div>

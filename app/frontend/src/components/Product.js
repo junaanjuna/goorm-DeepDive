@@ -2,8 +2,12 @@ import React from 'react'
 
 const Product = ({
   name,
-  imagePath
+  imagePath,
+  updateItemCount
 }) => {
+  const handleChange = (event) => {
+    updateItemCount(name, event.target.value)
+  }
   return (
     <div style={{textAlign: 'center'}}>
       <img
@@ -20,6 +24,7 @@ const Product = ({
           min='0'
           name='quantity'
           id='quantity'
+          onChange={handleChange}
         />
       </form>
     </div>
